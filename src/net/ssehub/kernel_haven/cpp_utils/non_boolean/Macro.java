@@ -23,6 +23,7 @@ public class Macro extends Formula {
     /**
      * Creates a non-Boolean {@link Macro}.
      * @param function The macro / function call
+     * @param argument The argument of the function call.
      */
     public Macro(String function, @Nullable Formula argument) {
         this.function = function;
@@ -53,11 +54,11 @@ public class Macro extends Formula {
     public boolean equals(@Nullable Object obj) {
         boolean equal = false;
         if (obj instanceof Macro) {
-            equal = ((Macro)obj).function.equals(function);
+            equal = ((Macro) obj).function.equals(function);
             if (equal && null != argument) {
-                equal = argument.equals(((Macro)obj).argument);
+                equal = argument.equals(((Macro) obj).argument);
             } else {
-                equal = ((Macro)obj).argument == null;
+                equal = ((Macro) obj).argument == null;
             }
         } 
         
@@ -74,9 +75,9 @@ public class Macro extends Formula {
         if (visitor instanceof INonBooleanFormulaVisitor) {
             return ((INonBooleanFormulaVisitor<T>) visitor).visitMacro(this);
         } else {
-            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with " +
-                visitor.getClass().getCanonicalName() + ", but supports only sub-classes of " +
-                INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
+            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with "
+                + visitor.getClass().getCanonicalName() + ", but supports only sub-classes of "
+                + INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
         }
     }
 
@@ -85,9 +86,9 @@ public class Macro extends Formula {
         if (visitor instanceof INonBooleanFormulaVisitor) {
             ((INonBooleanFormulaVisitor<?>) visitor).visitMacro(this);
         } else {
-            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with " +
-                visitor.getClass().getCanonicalName() + ", but supports only sub-classes of " +
-                INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
+            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with "
+                + visitor.getClass().getCanonicalName() + ", but supports only sub-classes of "
+                + INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
         }
     }
 }

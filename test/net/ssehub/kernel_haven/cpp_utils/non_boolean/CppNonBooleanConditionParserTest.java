@@ -104,7 +104,9 @@ public class CppNonBooleanConditionParserTest {
     }
         
     /**
-     * Tests that IS_ENABLED() is translated to a {@link Macro} if Linux macros are disabled. 
+     * Tests that IS_ENABLED() is translated to a {@link Macro} if Linux macros are disabled.
+     * 
+     * @throws ExpressionFormatException unwanted.
      */
     @Test
     public void testIsEnabledWithoutLinuxEnabled() throws ExpressionFormatException {

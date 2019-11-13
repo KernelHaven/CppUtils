@@ -22,8 +22,10 @@ import net.ssehub.kernel_haven.util.logic.IFormulaVisitor;
  * 
  * <b><font color="red">Warning:</font></b> Please use this class with care and as seldom as possible.
  * KernelHaven and its analyses are designed to handle only Boolean conditions.
- * @author El-Sharkawy
  *
+ * @param <T> The return type for the visit*() methods. Use {@link Void} if not needed.
+ * 
+ * @author El-Sharkawy
  */
 public interface INonBooleanFormulaVisitor<T> extends IFormulaVisitor<T> {
 
@@ -36,14 +38,14 @@ public interface INonBooleanFormulaVisitor<T> extends IFormulaVisitor<T> {
     
     /**
      * Visits a constant literal.
-     * @param operator The literal to visit.
+     * @param literal The literal to visit.
      * @return @return Some return value.
      */
     public T visitLiteral(Literal literal);
     
     /**
      * Visits a macro function call.
-     * @param operator The function to visit.
+     * @param macro The function to visit.
      * @return @return Some return value.
      */
     public T visitMacro(Macro macro);

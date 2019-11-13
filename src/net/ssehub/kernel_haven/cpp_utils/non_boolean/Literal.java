@@ -61,7 +61,7 @@ public class Literal extends Formula {
     public boolean equals(@Nullable Object obj) {
         boolean equal = false;
         if (obj instanceof Literal) {
-            equal = ((Literal)obj).literal.equals(literal);
+            equal = ((Literal) obj).literal.equals(literal);
         } 
         
         return equal;
@@ -77,9 +77,9 @@ public class Literal extends Formula {
         if (visitor instanceof INonBooleanFormulaVisitor) {
             return ((INonBooleanFormulaVisitor<T>) visitor).visitLiteral(this);
         } else {
-            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with " +
-                visitor.getClass().getCanonicalName() + ", but supports only sub-classes of " +
-                INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
+            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with "
+                + visitor.getClass().getCanonicalName() + ", but supports only sub-classes of "
+                + INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
         }
     }
 
@@ -88,9 +88,9 @@ public class Literal extends Formula {
         if (visitor instanceof INonBooleanFormulaVisitor) {
             ((INonBooleanFormulaVisitor<?>) visitor).visitLiteral(this);
         } else {
-            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with " +
-                visitor.getClass().getCanonicalName() + ", but supports only sub-classes of " +
-                INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
+            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with "
+                + visitor.getClass().getCanonicalName() + ", but supports only sub-classes of "
+                + INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
         }
     }
 }

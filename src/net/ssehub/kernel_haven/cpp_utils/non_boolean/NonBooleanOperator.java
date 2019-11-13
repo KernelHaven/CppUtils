@@ -73,9 +73,9 @@ public class NonBooleanOperator extends Formula {
         if (visitor instanceof INonBooleanFormulaVisitor) {
             return ((INonBooleanFormulaVisitor<T>) visitor).visitNonBooleanOperator(this);
         } else {
-            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with " +
-                visitor.getClass().getCanonicalName() + ", but supports only sub-classes of " +
-                INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
+            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with "
+                + visitor.getClass().getCanonicalName() + ", but supports only sub-classes of "
+                + INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
         }
     }
 
@@ -84,9 +84,9 @@ public class NonBooleanOperator extends Formula {
         if (visitor instanceof INonBooleanFormulaVisitor) {
             ((INonBooleanFormulaVisitor<?>) visitor).visitNonBooleanOperator(this);
         } else {
-            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with " +
-                visitor.getClass().getCanonicalName() + ", but supports only sub-classes of " +
-                INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
+            throw new RuntimeException(this.getClass().getCanonicalName() + " was used with "
+                + visitor.getClass().getCanonicalName() + ", but supports only sub-classes of "
+                + INonBooleanFormulaVisitor.class.getCanonicalName() + ".");
         }
     }
     

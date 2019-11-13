@@ -46,20 +46,12 @@ public class CppConditionParser implements ICppExressionVisitor<@NonNull Formula
     
     private boolean handleLinuxMacros;
     
-    /**
-     * If <tt>true</tt> Linux macros should be handled by the parser.
-     * @return Whether to handle Linux macros.
-     */
-    protected boolean getHandleLinuxMacros() {
-        return handleLinuxMacros;
-    }
-
     private boolean fuzzyParsing;
-
+    
     private InvalidConditionHandling invalidConditionHandling;
     
     private CppParser cppParser;
-    
+
     /**
      * Creates a new {@link CppConditionParser}.
      * 
@@ -75,6 +67,14 @@ public class CppConditionParser implements ICppExressionVisitor<@NonNull Formula
         this.fuzzyParsing = fuzzyParsing;
         this.invalidConditionHandling = invalidConditionHandling;
         this.cppParser = new CppParser();
+    }
+    
+    /**
+     * If <tt>true</tt> Linux macros should be handled by the parser.
+     * @return Whether to handle Linux macros.
+     */
+    protected boolean getHandleLinuxMacros() {
+        return handleLinuxMacros;
     }
     
     /**

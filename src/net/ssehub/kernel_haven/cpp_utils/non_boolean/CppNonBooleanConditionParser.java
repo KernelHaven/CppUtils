@@ -71,7 +71,7 @@ public class CppNonBooleanConditionParser extends CppConditionParser {
             
         case INT_SUB_UNARY:
             if (operator.getLeftSide() instanceof NumberLiteral) {
-                result = new Literal("-" + ((NumberLiteral) operator.getLeftSide()).getValue().toString());                
+                result = new Literal("-" + ((NumberLiteral) operator.getLeftSide()).getValue().toString());
             } else {
                 throw new ExpressionFormatException("Unsupported operator: " + operator.getOperator());
             }
@@ -85,6 +85,7 @@ public class CppNonBooleanConditionParser extends CppConditionParser {
             } else {
                 throw new ExpressionFormatException("Unsupported operator: " + operator.getOperator());
             }
+            break;
         }
         
         return result;
