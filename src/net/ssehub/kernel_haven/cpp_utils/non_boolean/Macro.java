@@ -29,6 +29,22 @@ public class Macro extends Formula {
         this.function = function;
         this.argument = argument;
     }
+    
+    /**
+     * Returns the argument of the function call.
+     * @return The argument of the function call, which may be <tt>null</tt>.
+     */
+    public @Nullable Formula getArgument() {
+        return argument;
+    }
+    
+    /**
+     * Returns the name of the function.
+     * @return The name of the called function.
+     */
+    public @NonNull String getFunction() {
+        return function;
+    }
 
     @Override
     protected int getPrecedence() {
