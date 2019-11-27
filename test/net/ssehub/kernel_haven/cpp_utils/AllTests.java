@@ -13,11 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.ssehub.kernel_haven.cpp_utils.non_boolean;
+package net.ssehub.kernel_haven.cpp_utils;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
+
+import net.ssehub.kernel_haven.cpp_utils.non_boolean.CppNonBooleanConditionParserTest;
 
 /**
  * All tests for this project.
@@ -26,7 +28,9 @@ import org.junit.runners.Suite.SuiteClasses;
  */
 @RunWith(Suite.class)
 @SuiteClasses({
-    CppNonBooleanConditionParserTest.class
+    CppConditionParserTest.class,
+    
+    CppNonBooleanConditionParserTest.class,
     })
 public class AllTests {
 

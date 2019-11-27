@@ -71,6 +71,7 @@ public class CppConditionParser implements ICppExressionVisitor<@NonNull Formula
     
     /**
      * If <tt>true</tt> Linux macros should be handled by the parser.
+     * 
      * @return Whether to handle Linux macros.
      */
     protected boolean getHandleLinuxMacros() {
