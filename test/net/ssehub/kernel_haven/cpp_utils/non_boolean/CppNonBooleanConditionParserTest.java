@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import net.ssehub.kernel_haven.cpp_utils.CppConditionParser;
 import net.ssehub.kernel_haven.cpp_utils.InvalidConditionHandling;
-import net.ssehub.kernel_haven.util.cpp.parser.CppOperator;
+import net.ssehub.kernel_haven.cpp_utils.parser.CppOperator;
 import net.ssehub.kernel_haven.util.logic.True;
 import net.ssehub.kernel_haven.util.logic.Variable;
 import net.ssehub.kernel_haven.util.logic.parser.ExpressionFormatException;

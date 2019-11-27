@@ -19,11 +19,11 @@ import static net.ssehub.kernel_haven.util.null_checks.NullHelpers.notNull;
 
 import net.ssehub.kernel_haven.cpp_utils.CppConditionParser;
 import net.ssehub.kernel_haven.cpp_utils.InvalidConditionHandling;
-import net.ssehub.kernel_haven.util.cpp.parser.ast.CppExpression;
-import net.ssehub.kernel_haven.util.cpp.parser.ast.FunctionCall;
-import net.ssehub.kernel_haven.util.cpp.parser.ast.NumberLiteral;
-import net.ssehub.kernel_haven.util.cpp.parser.ast.Operator;
-import net.ssehub.kernel_haven.util.cpp.parser.ast.Variable;
+import net.ssehub.kernel_haven.cpp_utils.parser.ast.CppExpression;
+import net.ssehub.kernel_haven.cpp_utils.parser.ast.FunctionCall;
+import net.ssehub.kernel_haven.cpp_utils.parser.ast.NumberLiteral;
+import net.ssehub.kernel_haven.cpp_utils.parser.ast.Operator;
+import net.ssehub.kernel_haven.cpp_utils.parser.ast.Variable;
 import net.ssehub.kernel_haven.util.logic.Conjunction;
 import net.ssehub.kernel_haven.util.logic.Disjunction;
 import net.ssehub.kernel_haven.util.logic.Formula;

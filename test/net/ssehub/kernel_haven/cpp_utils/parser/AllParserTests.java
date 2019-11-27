@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 University of Hildesheim, Software Systems Engineering
+ * Copyright 2017-2019 University of Hildesheim, Software Systems Engineering
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,28 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.ssehub.kernel_haven.cpp_utils;
+package net.ssehub.kernel_haven.cpp_utils.parser;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import net.ssehub.kernel_haven.cpp_utils.non_boolean.AllNonBooleanTests;
-import net.ssehub.kernel_haven.cpp_utils.parser.AllParserTests;
-
 /**
- * All tests for this project.
+ * All tests for the parser package.
  *
- * @author El-Sharkawy
+ * @author Adam
  */
 @RunWith(Suite.class)
 @SuiteClasses({
-    AllParserTests.class,
-    AllNonBooleanTests.class,
-    
-    CppConditionParserTest.class,
-    NumberUtilsTest.class,
+    CppLexerTest.class,
+    CppParserTest.class,
+    CppParserScenarioTests.class,
     })
-public class AllTests {
+public class AllParserTests {
 
 }

@@ -15,7 +15,7 @@
  */
 package net.ssehub.kernel_haven.cpp_utils.non_boolean;
 
-import net.ssehub.kernel_haven.util.cpp.parser.CppOperator;
+import net.ssehub.kernel_haven.cpp_utils.parser.CppOperator;
 import net.ssehub.kernel_haven.util.logic.Formula;
 import net.ssehub.kernel_haven.util.logic.IFormulaVisitor;
 import net.ssehub.kernel_haven.util.logic.IVoidFormulaVisitor;
