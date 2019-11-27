@@ -111,7 +111,7 @@ public class CppNonBooleanConditionParser extends CppConditionParser {
 
     @Override
     public @NonNull Formula visitLiteral(@NonNull NumberLiteral literal) throws ExpressionFormatException {
-        return new Literal(literal.getValue().toString());
+        return new Literal(notNull(literal.getValue().toString()));
     }
     
     @Override
