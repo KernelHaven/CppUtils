@@ -40,7 +40,7 @@ public class Macro extends Formula {
      * @param function The macro / function call
      * @param argument The argument of the function call.
      */
-    public Macro(String function, @Nullable Formula argument) {
+    public Macro(@NonNull String function, @Nullable Formula argument) {
         this.function = function;
         this.argument = argument;
     }
@@ -98,7 +98,7 @@ public class Macro extends Formula {
 
     @Override
     public int hashCode() {
-        return function.hashCode() + argument.hashCode();
+        return function.hashCode() + (argument != null ? argument.hashCode() : 27);
     }
 
     @Override

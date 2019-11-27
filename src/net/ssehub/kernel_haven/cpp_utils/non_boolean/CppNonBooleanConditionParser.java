@@ -136,17 +136,38 @@ public class CppNonBooleanConditionParser extends CppConditionParser {
             result = argument;
             
         } else if (getHandleLinuxMacros() && function.equals("IS_ENABLED")) {
+            if (argument == null) {
+                throw new ExpressionFormatException("Can't handle IS_ENABLED()-function without argument");
+            } else if (!(argument instanceof net.ssehub.kernel_haven.util.logic.Variable)) {
+                throw new ExpressionFormatException("Can't handle IS_ENABLED()-function one other elements than "
+                    + "variables");
+            }
+            
             net.ssehub.kernel_haven.util.logic.Variable variable
                 = (net.ssehub.kernel_haven.util.logic.Variable) argument;
             result = new Disjunction(variable,
                     new net.ssehub.kernel_haven.util.logic.Variable(variable.getName() + "_MODULE"));
             
         } else if (getHandleLinuxMacros() && function.equals("IS_MODULE")) {
+            if (argument == null) {
+                throw new ExpressionFormatException("Can't handle IS_MODULE()-function without argument");
+            } else if (!(argument instanceof net.ssehub.kernel_haven.util.logic.Variable)) {
+                throw new ExpressionFormatException("Can't handle IS_MODULE()-function one other elements than "
+                    + "variables");
+            }
+            
             net.ssehub.kernel_haven.util.logic.Variable variable
                 = (net.ssehub.kernel_haven.util.logic.Variable) argument;
             result = new net.ssehub.kernel_haven.util.logic.Variable(variable.getName() + "_MODULE");
             
         } else if (getHandleLinuxMacros() && function.equals("IS_BUILTIN")) {
+            if (argument == null) {
+                throw new ExpressionFormatException("Can't handle IS_BUILTIN()-function without argument");
+            } else if (!(argument instanceof net.ssehub.kernel_haven.util.logic.Variable)) {
+                throw new ExpressionFormatException("Can't handle IS_BUILTIN()-function one other elements than "
+                    + "variables");
+            }
+            
             result = argument;
             
         } else {
